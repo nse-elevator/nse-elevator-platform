@@ -1,7 +1,13 @@
 import mongoose from 'mongoose';
 import path from 'path';
 import fs from 'fs';
+import dns from 'dns';
 import { config } from './env';
+
+// Configure reliable DNS servers to resolve MongoDB Atlas SRV records smoothly on all networks
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch {}
 
 // Track in-memory or child process instance for teardown if applicable
 let memoryServer: any = null;

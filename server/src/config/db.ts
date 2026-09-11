@@ -20,7 +20,7 @@ export async function connectDB(): Promise<typeof mongoose> {
   try {
     // 1. Attempt standard connection to specified persistent MONGODB_URI
     await mongoose.connect(config.MONGODB_URI, {
-      serverSelectionTimeoutMS: 3000,
+      serverSelectionTimeoutMS: 15000,
     });
     console.log(`[MongoDB] ✅ Connected to PERSISTENT database: ${config.MONGODB_URI}`);
     return mongoose;

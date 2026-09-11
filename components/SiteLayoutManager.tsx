@@ -49,16 +49,23 @@ export function SiteLayoutManager({ children }: { children: React.ReactNode }) {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -20px 0px' }
+      { threshold: 0.05, rootMargin: '80px 0px 40px 0px' }
     );
 
-    // Defer observation slightly so initial layout and paint are 100% idle
+    // Attach promptly and trigger cards already in viewport immediately
     const timer = setTimeout(() => {
       const cards = document.querySelectorAll<HTMLElement>(
         '[data-stagger-grid] > *:not(.is-visible), [data-card-unit]:not(.is-visible), .service-card-entrance:not(.is-visible)'
       );
-      cards.forEach((card) => intersectionObserver.observe(card));
-    }, 400);
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 80 && rect.bottom > -40) {
+          card.classList.add('is-visible');
+        } else {
+          intersectionObserver.observe(card);
+        }
+      });
+    }, 50);
 
     return () => {
       clearTimeout(timer);

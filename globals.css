@@ -444,6 +444,14 @@
 :where([data-stagger-grid] > *),
 .service-card-entrance {
   height: 100%;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1) var(--stagger-delay, 0ms),
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) var(--stagger-delay, 0ms),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background-color 0.25s ease;
+  will-change: opacity, transform;
 }
 
 :where([data-card-unit].is-visible),
@@ -451,14 +459,19 @@
 :where([data-stagger-grid].is-visible > *),
 .service-card-entrance.is-visible {
   opacity: 1;
+  transform: translateY(0);
 }
 
-/* Zero delay on hover so hover transitions feel immediate and responsive */
+/* Tactile Responsive Card Hover Lift & Glow */
 :where([data-card-unit].is-visible:hover),
 :where([data-stagger-grid] > *.is-visible:hover),
 :where([data-stagger-grid].is-visible > *:hover),
 .service-card-entrance.is-visible:hover {
+  transform: translateY(-5px) !important;
   transition-delay: 0ms !important;
+  transition-duration: 0.25s !important;
+  box-shadow: 0 14px 28px -4px rgba(15, 23, 42, 0.12), 0 6px 12px -2px rgba(15, 23, 42, 0.06) !important;
+  border-color: rgba(255, 92, 0, 0.5) !important;
 }
 
 /* Progressive stagger delays for up to 12 child cards */

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { trackPhoneClick } from '../lib/analytics';
 
 const serviceLinks = [
@@ -78,6 +79,17 @@ export function GlobalFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
           {/* Column 1: Brand & Credentials (3/12 on xl, 4/12 on lg) */}
           <div className="space-y-4 md:col-span-2 lg:col-span-4 xl:col-span-3">
+            <div className="flex items-center gap-3">
+              <Link href="/" className="inline-flex items-center bg-white px-3 py-1.5 rounded-lg shadow-sm border border-slate-700/50 hover:shadow-md transition-all">
+                <Image
+                  src="/images/nse-logo-nav.webp"
+                  alt="NSE Elevator Services - New Sahyadri Elevator"
+                  width={156}
+                  height={88}
+                  className="h-8 w-auto object-contain"
+                />
+              </Link>
+            </div>
             <div className="flex items-center gap-2">
               <span className="font-extrabold text-base tracking-tight text-white uppercase">
                 NSE – <span className="text-brand-orange">New Sahyadri Elevator</span>

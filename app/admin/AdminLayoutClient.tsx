@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
 interface NavItem {
@@ -80,14 +81,24 @@ export default function AdminLayoutClient({ children }: { children: React.ReactN
       {/* Top Admin Header Bar */}
       <header className="bg-steel-950 text-white border-b border-steel-800 px-4 sm:px-6 py-3 flex items-center justify-between sticky top-0 z-40">
         <div className="flex items-center gap-3">
-          <Link href="/admin/dashboard" className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emergency-500" />
-            <span className="font-extrabold text-sm tracking-tight text-white uppercase font-mono">
-              NSE SMART <span className="text-emergency-500">ADMIN</span>
-            </span>
-            <span className="text-[10px] font-mono text-steel-400 uppercase tracking-widest mt-0.5">
-              New Sahyadri Elevator Console
-            </span>
+          <Link href="/admin/dashboard" className="flex items-center gap-3">
+            <div className="bg-white px-2 py-1 rounded shadow-sm border border-slate-700/50 flex items-center">
+              <Image
+                src="/images/nse-logo-nav.webp"
+                alt="NSE Elevator Services"
+                width={156}
+                height={88}
+                className="h-6 w-auto object-contain"
+              />
+            </div>
+            <div className="hidden sm:flex flex-col">
+              <span className="font-extrabold text-xs tracking-tight text-white uppercase font-mono">
+                NSE SMART <span className="text-emergency-500">ADMIN</span>
+              </span>
+              <span className="text-[9px] font-mono text-steel-400 uppercase tracking-widest">
+                New Sahyadri Elevator Console
+              </span>
+            </div>
           </Link>
           <span className="text-[11px] font-mono bg-steel-800 text-steel-300 px-2 py-0.5 rounded-sm hidden sm:inline-block">
             Internal Control Panel

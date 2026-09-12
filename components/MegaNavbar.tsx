@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function MegaNavbar() {
   const pathname = usePathname();
@@ -93,18 +94,19 @@ export function MegaNavbar() {
         <div className="flex items-center justify-between h-20">
           {/* Brand Logo & Identifier */}
           <div className="flex items-center gap-3">
-            <Link href="/" prefetch={true} className="flex items-center gap-3 focus-ring rounded-sm">
-              <div className="w-10 h-10 bg-steel-800 border border-steel-700 flex items-center justify-center rounded-sm text-steel-200">
-                {/* Mechanical Elevator Cable / Sheave Icon */}
-                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="4" y="3" width="16" height="18" rx="1" />
-                  <line x1="9" y1="3" x2="9" y2="21" strokeDasharray="2 2" />
-                  <line x1="15" y1="3" x2="15" y2="21" strokeDasharray="2 2" />
-                  <rect x="7" y="9" width="10" height="8" rx="1" fill="#1E293B" />
-                </svg>
+            <Link href="/" prefetch={true} className="flex items-center gap-3 focus-ring rounded-lg group">
+              <div className="bg-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg shadow-sm border border-white/20 flex items-center transition-all duration-200 group-hover:shadow-md group-hover:scale-[1.02]">
+                <Image
+                  src="/images/nse-logo-nav.webp"
+                  alt="NSE Elevator Services - New Sahyadri Elevator"
+                  width={156}
+                  height={88}
+                  priority
+                  className="h-8 sm:h-9 w-auto object-contain"
+                />
               </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-lg tracking-tight leading-none text-white uppercase">
+              <div className="hidden xl:flex flex-col">
+                <span className="font-extrabold text-sm tracking-tight leading-none text-white uppercase">
                   NSE <span className="text-emergency-500">SMART</span>
                 </span>
                 <span className="text-[10px] font-mono tracking-widest text-steel-400 uppercase mt-0.5">

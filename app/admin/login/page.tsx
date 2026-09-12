@@ -3,6 +3,7 @@
 import React, { Suspense, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function AdminLoginForm() {
   const router = useRouter();
@@ -61,13 +62,25 @@ function AdminLoginForm() {
       <div className="w-full max-w-md bg-steel-900 border border-steel-800 rounded-sm p-8 shadow-machined-card relative z-10">
         {/* Header Branding */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-steel-950 border border-steel-800 rounded-sm mb-3">
+          <div className="flex justify-center mb-4">
+            <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-700/50 inline-flex items-center">
+              <Image
+                src="/images/nse-logo-nav.webp"
+                alt="NSE Elevator Services"
+                width={156}
+                height={88}
+                priority
+                className="h-10 w-auto object-contain"
+              />
+            </div>
+          </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-steel-950 border border-steel-800 rounded-sm mb-2">
             <span className="w-2 h-2 rounded-full bg-emergency-500 animate-pulse" />
             <span className="text-[10px] font-mono uppercase tracking-widest text-steel-400 font-bold">
               Restricted Access Portal
             </span>
           </div>
-          <h1 className="text-2xl font-extrabold tracking-tight text-white uppercase">
+          <h1 className="text-xl font-extrabold tracking-tight text-white uppercase font-mono">
             NSE SMART <span className="text-emergency-500">ADMIN</span>
           </h1>
           <p className="text-xs text-steel-400 font-mono mt-1">

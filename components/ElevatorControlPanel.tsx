@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, memo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 
 interface ElevatorControlPanelProps {
@@ -213,15 +214,15 @@ export function ElevatorControlPanel({
 
             {/* Brand Logo Header */}
             <div className="mb-3.5 flex flex-col items-center justify-center pt-2 text-center">
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-white/95 rounded border border-slate-300 shadow-sm">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-orange animate-pulse" />
-                <span className="font-mono text-xs font-black tracking-widest text-slate-900 uppercase">
-                  NSE SMART
-                </span>
+              <div className="flex items-center justify-center px-3 py-1.5 bg-white/95 rounded border border-slate-300 shadow-sm">
+                <Image
+                  src="/images/nse-logo-nav.webp"
+                  alt="NSE Elevator Services"
+                  width={156}
+                  height={88}
+                  className="h-8 w-auto object-contain"
+                />
               </div>
-              <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">
-                New Sahyadri Elevator
-              </p>
             </div>
 
             {/* Max Capacity Indicator */}

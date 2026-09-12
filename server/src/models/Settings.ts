@@ -19,8 +19,8 @@ const SettingsSchema: Schema = new Schema(
   {
     companyName: { type: String, default: 'NSE – New Sahyadri Elevator' },
     brandName: { type: String, default: 'NSE SMART' },
-    contactPhone: { type: String, default: '+91 90110 96990' },
-    whatsappNumber: { type: String, default: '+91 90110 96990' },
+    contactPhone: { type: String, default: '+91 90499 94679' },
+    whatsappNumber: { type: String, default: '+91 90499 94679' },
     dispatchEmail: { type: String, default: 'office.pune@nsei.in' },
     emergencyBannerText: {
       type: String,

@@ -57,10 +57,10 @@ export function HeroFloor() {
                   </svg>
                 </a>
                 <a
-                  href="tel:+919011096990"
+                  href="tel:+919049994679"
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-12 rounded-md px-8 text-base border-2 border-slate-300 bg-white text-slate-800 hover:border-slate-800 hover:bg-slate-900 hover:text-white shadow-sm active:scale-95"
                 >
-                  +91 90110 96990
+                  +91 90499 94679
                 </a>
               </div>
             </div>

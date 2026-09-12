@@ -5,7 +5,7 @@ import { TimeOnPageTracker } from '../../components/TimeOnPageTracker';
 
 export const metadata: Metadata = {
   title: '24/7 Emergency Lift Breakdown & Repair | NSE – New Sahyadri Elevator',
-  description: 'Immediate 24/7 elevator repair and passenger entrapment rescue across Navi Mumbai and Pune. Prompt on-site engineering dispatch. Call/WhatsApp +91 90110 96990.',
+  description: 'Immediate 24/7 elevator repair and passenger entrapment rescue across Navi Mumbai and Pune. Prompt on-site engineering dispatch. Call/WhatsApp +91 90499 94679.',
 };
 
 const emergencyFaqs = [
@@ -47,13 +47,13 @@ export default function EmergencyElevatorRepairPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               id="emergency-page-call-btn"
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark active:scale-[0.98] text-white font-mono font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 cursor-pointer"
             >
               <svg className="w-6 h-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>+91 90110 96990 (Call Now)</span>
+              <span>+91 90499 94679 (Call Now)</span>
             </a>
           </div>
 
@@ -102,7 +102,7 @@ export default function EmergencyElevatorRepairPage() {
               <span className="text-2xl font-mono text-brand-orange font-bold block mb-2">03</span>
               <h3 className="text-base font-bold text-slate-900 mb-2">Call NSE Emergency Dispatch</h3>
               <p className="text-xs text-slate-600 leading-relaxed text-justify">
-                Dial <strong className="text-slate-900">+91 90110 96990</strong> immediately. State your building name, floor level, and elevator brand. Our nearest patrol engineer will be routed immediately.
+                Dial <strong className="text-slate-900">+91 90499 94679</strong> immediately. State your building name, floor level, and elevator brand. Our nearest patrol engineer will be routed immediately.
               </p>
             </div>
           </div>

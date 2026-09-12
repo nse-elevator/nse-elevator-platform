@@ -13,7 +13,7 @@ export const leadRateLimiter = rateLimit({
     meta: null,
     error: {
       code: 'RATE_LIMIT_EXCEEDED',
-      message: 'Too many lead submissions from this IP address. Please wait 15 minutes before submitting again or call NSE dispatch at +91 90110 96990.',
+      message: 'Too many lead submissions from this IP address. Please wait 15 minutes before submitting again or call NSE dispatch at +91 90499 94679.',
     },
   },
 });

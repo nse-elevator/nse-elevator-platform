@@ -19,8 +19,8 @@ export default function AdminSettingsPage() {
   const [settings, setSettings] = useState<SiteSettings>({
     companyName: 'NSE – New Sahyadri Elevator',
     brandName: 'NSE SMART',
-    contactPhone: '+91 90110 96990',
-    whatsappNumber: '+91 90110 96990',
+    contactPhone: '+91 90499 94679',
+    whatsappNumber: '+91 90499 94679',
     dispatchEmail: 'office.pune@nsei.in',
     emergencyBannerText: 'NSE 24/7 Breakdown Dispatch • Rapid Emergency Response Across Corridors',
     emergencyResponseWindow: '24/7 Rapid Response',

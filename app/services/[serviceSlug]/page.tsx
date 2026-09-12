@@ -115,10 +115,10 @@ export default async function ServiceSubPage({ params }: { params: { serviceSlug
               Request Engineering Survey →
             </a>
             <a
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               className="text-slate-700 hover:text-brand-orange font-mono text-xs font-bold transition-colors"
             >
-              Or Call Dispatch: +91 90110 96990
+              Or Call Dispatch: +91 90499 94679
             </a>
           </div>
         </div>

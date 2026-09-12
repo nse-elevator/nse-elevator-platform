@@ -7,7 +7,7 @@ export function StickyMobileCTA() {
     import('../lib/analytics').then(({ trackPhoneClick, trackEmergencyCtaClick }) => {
       trackPhoneClick({
         location: 'sticky_mobile_cta',
-        phoneNumber: '+91 90110 96990',
+        phoneNumber: '+91 90499 94679',
         contactMethod: 'phone',
       });
       trackEmergencyCtaClick({
@@ -42,7 +42,7 @@ export function StickyMobileCTA() {
         {/* Left CTA: 24/7 Emergency Dispatch Direct Phone */}
         <a
           id="sticky-mobile-call-btn"
-          href="tel:+919011096990"
+          href="tel:+919049994679"
           onClick={handleCallClick}
           className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orange-dark active:scale-[0.98] text-white h-12 rounded-lg font-bold text-xs sm:text-sm font-mono tracking-wide transition-all shadow-md cursor-pointer"
         >

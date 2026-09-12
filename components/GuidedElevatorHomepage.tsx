@@ -232,10 +232,10 @@ export function GuidedElevatorHomepage() {
                       </svg>
                     </button>
                     <a
-                      href="tel:+919011096990"
+                      href="tel:+919049994679"
                       className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-12 rounded-md px-8 text-base border-2 border-slate-300 bg-white text-slate-800 hover:border-slate-800 hover:bg-slate-900 hover:text-white shadow-sm active:scale-95"
                     >
-                      +91 90110 96990
+                      +91 90499 94679
                     </a>
                   </div>
                 </div>
@@ -922,13 +922,13 @@ export function GuidedElevatorHomepage() {
                           Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
                         </p>
                         <p className="text-[11px] text-slate-500 font-mono mt-0.5">
-                          Local Hotline &amp; WhatsApp: <a href="tel:+919011096990" className="text-brand-orange font-bold hover:underline">+91 90110 96990</a> • Coverage: Pune, PCMC, Katraj, Hinjewadi &amp; Surrounding Localities
+                          Local Hotline &amp; WhatsApp: <a href="tel:+919049994679" className="text-brand-orange font-bold hover:underline">+91 90499 94679</a> • Coverage: Pune, PCMC, Katraj, Hinjewadi &amp; Surrounding Localities
                         </p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 shrink-0 sm:self-center">
                       <a
-                        href="tel:+919011096990"
+                        href="tel:+919049994679"
                         className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-brand-orange px-4 py-2 text-xs font-mono font-bold text-white shadow-xs transition-all hover:bg-brand-orange-dark active:scale-95 whitespace-nowrap"
                       >
                         Call Pune Hub
@@ -1315,10 +1315,10 @@ export function GuidedElevatorHomepage() {
                         For passenger entrapments or sudden elevator breakdowns across Navi Mumbai and Pune.
                       </p>
                       <a
-                        href="tel:+919011096990"
+                        href="tel:+919049994679"
                         className="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-brand-orange px-5 py-3 font-semibold text-sm text-white w-full shadow-md transition-all hover:bg-brand-orange-dark active:scale-95"
                       >
-                        Call +91 90110 96990
+                        Call +91 90499 94679
                       </a>
                     </div>
 

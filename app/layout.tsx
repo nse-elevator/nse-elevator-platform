@@ -46,7 +46,7 @@ const hasClarity = Boolean(
 
 export const metadata: Metadata = {
   title: 'NSE – New Sahyadri Elevator | Lift Maintenance, AMC & Repair in Navi Mumbai & Pune',
-  description: 'Trusted partner for high-rise elevator operations — maintenance, repairs, modernization for residential societies and commercial complexes at ~30% lower cost than OEM direct. Call/WhatsApp +91 90110 96990.',
+  description: 'Trusted partner for high-rise elevator operations — maintenance, repairs, modernization for residential societies and commercial complexes at ~30% lower cost than OEM direct. Call/WhatsApp +91 90499 94679.',
   metadataBase: new URL('https://nsei.in'),
   robots: {
     index: true,
@@ -71,7 +71,7 @@ const organizationSchema = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+91-90110-96990',
+      telephone: '+91-90499-94679',
       contactType: 'emergency dispatch and customer support',
       areaServed: 'IN',
       availableLanguage: ['en', 'mr', 'hi'],

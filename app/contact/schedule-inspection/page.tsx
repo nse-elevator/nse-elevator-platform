@@ -54,7 +54,7 @@ export default function ScheduleInspectionPage() {
                 Our Chief Code Compliance Officer has received your request for <strong className="text-steel-950">{formData.buildingName}</strong>. We will confirm test weight logistics and inspector coordination within 4 business hours.
               </p>
               <div className="p-4 bg-steel-100 border border-steel-200 rounded-sm text-xs font-mono text-steel-700 max-w-md mx-auto">
-                Need emergency violation clearance? Call direct: +91 90110 96990
+                Need emergency violation clearance? Call direct: +91 90499 94679
               </div>
             </div>
           ) : (

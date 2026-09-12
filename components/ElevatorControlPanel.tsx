@@ -357,7 +357,7 @@ export function ElevatorControlPanel({
             {/* Emergency / Service Phone Box */}
             <div className="mx-auto mt-3 w-[86%]">
               <a
-                href="tel:+919011096990"
+                href="tel:+919049994679"
                 className="block w-full transition-all hover:shadow-md rounded-sm border border-slate-300 p-[1px] shadow-sm bg-white"
               >
                 <span className="relative overflow-hidden rounded-sm flex items-center justify-center gap-2.5 px-3 py-3 bg-white">
@@ -368,7 +368,7 @@ export function ElevatorControlPanel({
                   </div>
                   <div className="text-left">
                     <p className="text-[9px] font-bold uppercase tracking-wider text-slate-500">Emergency / Service</p>
-                    <p className="text-sm font-bold text-slate-900">+91 90110 96990</p>
+                    <p className="text-sm font-bold text-slate-900">+91 90499 94679</p>
                   </div>
                 </span>
               </a>
@@ -416,7 +416,7 @@ export function ElevatorControlPanel({
               </button>
 
               <a
-                href="https://wa.me/919011096990?text=Hello%20NSE%2C%20I%20need%20urgent%20elevator%20assistance."
+                href="https://wa.me/919049994679?text=Hello%20NSE%2C%20I%20need%20urgent%20elevator%20assistance."
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Direct WhatsApp Hotline"

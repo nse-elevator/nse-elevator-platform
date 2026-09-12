@@ -175,11 +175,11 @@ export function SiteLayoutManager({ children }: { children: React.ReactNode }) {
 
           <div className="flex items-center gap-3">
             <a
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               className="hidden xl:inline-flex items-center gap-1.5 font-mono text-xs font-bold text-slate-700 hover:text-brand-orange transition-colors"
             >
               <span className="text-brand-orange">📞</span>
-              <span>+91 90110 96990</span>
+              <span>+91 90499 94679</span>
             </a>
             <Link
               href="/contact/request-maintenance-quote"

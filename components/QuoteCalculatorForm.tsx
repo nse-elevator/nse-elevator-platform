@@ -351,8 +351,8 @@ export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormPro
               </p>
               <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg max-w-md mx-auto text-xs font-mono text-slate-600">
                 <span>Immediate Critical Issue? Call / WhatsApp: </span>
-                <a href="tel:+919011096990" className="text-brand-orange font-bold hover:underline">
-                  +91 90110 96990
+                <a href="tel:+919049994679" className="text-brand-orange font-bold hover:underline">
+                  +91 90499 94679
                 </a>
               </div>
             </div>

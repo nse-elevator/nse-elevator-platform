@@ -9,14 +9,14 @@ export function FloatingWhatsAppCTA() {
     import('../lib/analytics').then(({ trackPhoneClick }) => {
       trackPhoneClick({
         location: 'floating_whatsapp_always_on_screen',
-        phoneNumber: '+91 90110 96990',
+        phoneNumber: '+91 90499 94679',
         contactMethod: 'whatsapp',
       });
     });
   };
 
   const whatsappUrl =
-    'https://wa.me/919011096990?text=' +
+    'https://wa.me/919049994679?text=' +
     encodeURIComponent('Hello NSE, I need elevator service assistance.');
 
   return (

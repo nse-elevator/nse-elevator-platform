@@ -59,17 +59,17 @@ export function GlobalFooter() {
           <div className="flex items-center gap-3 shrink-0 w-full md:w-auto justify-start md:justify-end">
             <a
               id="footer-emergency-call-btn"
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               onClick={() => {
                 trackPhoneClick({
                   location: 'global_footer',
-                  phoneNumber: '+91 90110 96990',
+                  phoneNumber: '+91 90499 94679',
                   contactMethod: 'phone',
                 });
               }}
               className="bg-brand-orange hover:bg-brand-orange-dark text-white font-mono font-bold px-6 py-3 min-h-[44px] inline-flex items-center justify-center rounded-lg transition-all text-xs shadow-lg active:scale-95 cursor-pointer whitespace-nowrap w-full sm:w-auto"
             >
-              CALL / WHATSAPP: +91 90110 96990
+              CALL / WHATSAPP: +91 90499 94679
             </a>
           </div>
         </div>

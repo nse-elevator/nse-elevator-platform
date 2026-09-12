@@ -35,7 +35,7 @@ export function ServiceHero({
   const handlePhoneClick = () => {
     trackPhoneClick({
       location: `service_hero_${serviceSlug}`,
-      phoneNumber: '+91 90110 96990',
+      phoneNumber: '+91 90499 94679',
       contactMethod: 'phone',
     });
   };
@@ -123,7 +123,7 @@ export function ServiceHero({
             </Link>
 
             <a
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               onClick={handlePhoneClick}
               className="min-h-[44px] bg-white hover:bg-slate-100 active:scale-[0.98] text-slate-800 border border-slate-300 font-semibold px-6 py-3.5 rounded-md text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
             >

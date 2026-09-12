@@ -73,7 +73,7 @@ export const adminContentConfigs: Record<string, AdminContentConfig> = {
       { name: 'slug', label: 'URL Slug (auto-generated if blank)', type: 'text', placeholder: 'e.g. elevator-repair-navi-mumbai' },
       { name: 'slaMinutes', label: 'Guaranteed / Avg SLA (Minutes)', type: 'number', defaultValue: 30 },
       { name: 'branchAddress', label: 'Local Office / Branch Address', type: 'text', required: true },
-      { name: 'branchPhone', label: 'Direct Dispatch Phone Number', type: 'text', required: true, defaultValue: '+91 90110 96990' },
+      { name: 'branchPhone', label: 'Direct Dispatch Phone Number', type: 'text', required: true, defaultValue: '+91 90499 94679' },
       { name: 'regulatoryAuthority', label: 'Field Operations Notes', type: 'text', required: false },
       { name: 'coveredZips', label: 'Covered Postal ZIP Codes (comma-separated)', type: 'stringArray' },
       { name: 'countiesServed', label: 'Covered Localities & Corridors (Tag Chips)', type: 'stringArray', placeholder: 'e.g. Baner, Wakad, Hinjewadi...' },

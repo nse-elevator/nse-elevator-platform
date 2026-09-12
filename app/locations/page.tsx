@@ -25,7 +25,7 @@ const ScrollDepthTracker = dynamic(
 
 export const metadata: Metadata = {
   title: 'Service Areas & Operations Hubs | NSE – New Sahyadri Elevator',
-  description: 'Explore lift maintenance and repair service areas in Navi Mumbai and Pune. 24/7 breakdown dispatch with rapid emergency response. Call/WhatsApp +91 90110 96990.',
+  description: 'Explore lift maintenance and repair service areas in Navi Mumbai and Pune. 24/7 breakdown dispatch with rapid emergency response. Call/WhatsApp +91 90499 94679.',
 };
 
 const locations = [
@@ -34,7 +34,7 @@ const locations = [
     slug: 'elevator-repair-navi-mumbai',
     hub: 'Navi Mumbai Regional Headquarters',
     address: 'Airoli, Navi Mumbai, Maharashtra',
-    phone: '+91 90110 96990',
+    phone: '+91 90499 94679',
     areas: 'Airoli, Vashi, Kopar Khairane, Ghansoli, Mahape MIDC, Belapur, Panvel',
     operationsCoverage: '24/7 Rapid Dispatch • Priority Coverage',
   },
@@ -43,7 +43,7 @@ const locations = [
     slug: 'elevator-repair-pune-dattanagar',
     hub: 'Pune Regional Operations Hub',
     address: 'Dattanagar, Pune, Maharashtra',
-    phone: '+91 90110 96990',
+    phone: '+91 90499 94679',
     areas: 'Dattanagar, Katraj, Ambegaon, Dhankawadi, Sinhagad Road, Kothrud, Pune City, Baner, Pashan, Wakad, Hinjewadi, Ravet, Punavale, Tathawade, Mamurdi, Marunji, Nere, Chinchwad',
     operationsCoverage: '15+ Certified Engineers • 24/7 Emergency Units',
   },

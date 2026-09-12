@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { locationSlug: str
   if (!loc) return { title: 'Location Not Found | NSE – New Sahyadri Elevator' };
   return {
     title: loc.metaTitle || `${loc.cityName} Lift Maintenance & AMC | NSE`,
-    description: loc.metaDescription || `24/7 Lift maintenance and repair in ${loc.cityName}. Call/WhatsApp +91 90110 96990.`,
+    description: loc.metaDescription || `24/7 Lift maintenance and repair in ${loc.cityName}. Call/WhatsApp +91 90499 94679.`,
   };
 }
 
@@ -45,7 +45,7 @@ export default async function LocationPage({ params }: { params: { locationSlug:
     '@type': 'HomeAndConstructionBusiness',
     name: `NSE – New Sahyadri Elevator - ${loc.cityName}`,
     image: 'https://nsei.in/fleet.jpg',
-    telephone: loc.branchPhone || '+91 90110 96990',
+    telephone: loc.branchPhone || '+91 90499 94679',
     priceRange: '₹₹₹',
     address: {
       '@type': 'PostalAddress',
@@ -114,10 +114,10 @@ export default async function LocationPage({ params }: { params: { locationSlug:
 
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center lg:items-stretch xl:items-center gap-4 pt-4">
                 <a
-                  href={`tel:${(loc.branchPhone || '+91 90110 96990').replace(/[^0-9+]/g, '')}`}
+                  href={`tel:${(loc.branchPhone || '+91 90499 94679').replace(/[^0-9+]/g, '')}`}
                   className="min-h-[44px] bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3.5 rounded-lg text-sm transition-all shadow-md active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>🚨 Call / WhatsApp: {loc.branchPhone || '+91 90110 96990'}</span>
+                  <span>🚨 Call / WhatsApp: {loc.branchPhone || '+91 90499 94679'}</span>
                 </a>
                 <a
                   href="#local-quote"
@@ -154,7 +154,7 @@ export default async function LocationPage({ params }: { params: { locationSlug:
                   </div>
                   <div>
                     <span className="text-slate-500 block text-[10px] uppercase font-bold">Direct Dispatch Phone:</span>
-                    <span className="text-brand-orange font-bold text-sm">{loc.branchPhone || '+91 90110 96990'}</span>
+                    <span className="text-brand-orange font-bold text-sm">{loc.branchPhone || '+91 90499 94679'}</span>
                   </div>
                   <div>
                     <span className="text-slate-500 block text-[10px] uppercase font-bold">Emergency Response:</span>

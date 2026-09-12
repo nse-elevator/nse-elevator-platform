@@ -151,13 +151,13 @@ export function MegaNavbar() {
           {/* Desktop Right CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-brand-orange"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-brand-orange">
                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
               </svg>
-              +91 90110 96990
+              +91 90499 94679
             </a>
             {/* 8. Get a Free Quote */}
             <button
@@ -233,10 +233,10 @@ export function MegaNavbar() {
             </button>
             <a
               id="mobile-nav-call-btn"
-              href="tel:+919011096990"
+              href="tel:+919049994679"
               className="w-full text-center bg-white/10 border border-white/20 text-white font-mono font-bold py-3.5 rounded-md text-sm transition-all block min-h-[48px] flex items-center justify-center"
             >
-              24/7 DISPATCH: +91 90110 96990
+              24/7 DISPATCH: +91 90499 94679
             </a>
           </div>
         </div>

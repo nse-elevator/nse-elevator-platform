@@ -106,19 +106,19 @@ export function FreeAuditLeadMagnet() {
               <div className="pt-3 border-t border-slate-200">
                 <span className="text-[10px] text-slate-500 block">Need immediate response?</span>
                 <a
-                  href="https://wa.me/919011096990?text=Hi%20NSE,%20we%20would%20like%20to%20book%20a%20Free%2025-Point%20Elevator%20Health%20Audit."
+                  href="https://wa.me/919049994679?text=Hi%20NSE,%20we%20would%20like%20to%20book%20a%20Free%2025-Point%20Elevator%20Health%20Audit."
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => {
                     trackPhoneClick({
                       location: 'free_audit_lead_magnet',
-                      phoneNumber: '+91 90110 96990',
+                      phoneNumber: '+91 90499 94679',
                       contactMethod: 'whatsapp',
                     });
                   }}
                   className="mt-1 inline-flex items-center justify-center gap-1.5 text-xs font-mono font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
                 >
-                  <span>💬 WhatsApp: +91 90110 96990</span>
+                  <span>💬 WhatsApp: +91 90499 94679</span>
                 </a>
               </div>
             </div>

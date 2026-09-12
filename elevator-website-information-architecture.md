@@ -84,7 +84,7 @@ The website structure is designed around search intent clustering: **Local Searc
 * **Secondary Keywords:** `lift AMC Pune`, `elevator maintenance company Navi Mumbai`, `lift repair Pune`, `multi-brand elevator AMC`
 * **Recommended H1:** `NSE – New Sahyadri Elevator | Lift Maintenance, AMC & Repair`
 * **Meta Title (< 60 chars):** `Lift AMC & Repair in Navi Mumbai & Pune | NSE SMART`
-* **Meta Description (< 155 chars):** `Trusted partner for high-rise elevator operations — maintenance, repairs, modernization at ~30% lower cost than OEM direct. Call/WhatsApp +91 90110 96990.`
+* **Meta Description (< 155 chars):** `Trusted partner for high-rise elevator operations — maintenance, repairs, modernization at ~30% lower cost than OEM direct. Call/WhatsApp +91 90499 94679.`
 * **Core Value Propositions:**
   * 350+ Elevators Under Care
   * 15+ Certified Engineers in Pune
@@ -102,7 +102,7 @@ The website structure is designed around search intent clustering: **Local Searc
 * **Recommended H1:** `24/7 Emergency Lift Breakdown Repair & Passenger Rescue`
 * **Meta Title (< 60 chars):** `24/7 Emergency Lift Breakdown Repair | NSE`
 * **Meta Description (< 155 chars):** `Rapid 24/7 emergency elevator repair & passenger entrapment rescue. Over 15 certified engineers in Navi Mumbai & Pune. Average response < 30 mins.`
-* **Key Actions:** Direct dial and WhatsApp trigger: `+91 90110 96990`.
+* **Key Actions:** Direct dial and WhatsApp trigger: `+91 90499 94679`.
 
 ---
 
@@ -159,7 +159,7 @@ Rather than an anti-OEM or US-specific "non-proprietary" stance, the website pos
   "@type": "HomeAndConstructionBusiness",
   "name": "NSE – New Sahyadri Elevator - Navi Mumbai",
   "image": "https://nsei.in/fleet.jpg",
-  "telephone": "+91-90110-96990",
+  "telephone": "+91-90499-94679",
   "priceRange": "₹₹₹",
   "address": {
     "@type": "PostalAddress",
@@ -197,7 +197,7 @@ Rather than an anti-OEM or US-specific "non-proprietary" stance, the website pos
    * Inclusion 3: Maintenance Assessment (Independent Quality & Spares Appraisal)
    * Badge: 100% Free – No Obligation
 2. **Emergency Contacts**:
-   * Phone / WhatsApp: `+91 90110 96990`
+   * Phone / WhatsApp: `+91 90499 94679`
    * Email: `office.pune@nsei.in`
    * Motto: "Excellence in Service"
    * Tagline: "Your Trust. Our Commitment. Safe Rides. Every Time."

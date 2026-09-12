@@ -31,10 +31,10 @@ export function ContactFloor() {
                     For passenger entrapments or sudden elevator breakdowns across Navi Mumbai and Pune.
                   </p>
                   <a
-                    href="tel:+919011096990"
+                    href="tel:+919049994679"
                     className="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-brand-orange px-5 py-3 font-semibold text-sm text-white w-full shadow-md transition-all hover:bg-brand-orange-dark active:scale-95"
                   >
-                    Call +91 90110 96990
+                    Call +91 90499 94679
                   </a>
                 </div>
 

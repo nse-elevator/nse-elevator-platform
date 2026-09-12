@@ -24,7 +24,7 @@ const metroRegions: MetroRegion[] = [
     name: 'Navi Mumbai Headquarters',
     stateCode: 'MH',
     hqAddress: 'Airoli, Navi Mumbai, Maharashtra',
-    phone: '+91 90110 96990',
+    phone: '+91 90499 94679',
     avgResponseMins: 30,
     coveredCounties: ['Airoli', 'Vashi', 'Kopar Khairane', 'Ghansoli', 'Mahape MIDC', 'CBD Belapur', 'Panvel'],
     serviceCoverage: '7 Key Suburbs & Industrial Corridors',
@@ -37,7 +37,7 @@ const metroRegions: MetroRegion[] = [
     name: 'Pune Branch Office (Dattanagar)',
     stateCode: 'MH',
     hqAddress: 'Dattanagar, Pune, Maharashtra',
-    phone: '+91 90110 96990',
+    phone: '+91 90499 94679',
     avgResponseMins: 30,
     coveredCounties: [
       'Dattanagar',

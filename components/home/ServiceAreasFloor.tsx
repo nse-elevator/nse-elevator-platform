@@ -136,13 +136,13 @@ export function ServiceAreasFloor() {
                       Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
                     </p>
                     <p className="text-[11px] text-slate-500 font-mono mt-0.5">
-                      Local Hotline &amp; WhatsApp: <a href="tel:+919011096990" className="text-brand-orange font-bold hover:underline">+91 90110 96990</a> • Coverage: Pune, PCMC, Katraj, Hinjewadi &amp; Surrounding Localities
+                      Local Hotline &amp; WhatsApp: <a href="tel:+919049994679" className="text-brand-orange font-bold hover:underline">+91 90499 94679</a> • Coverage: Pune, PCMC, Katraj, Hinjewadi &amp; Surrounding Localities
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 shrink-0 sm:self-center">
                   <a
-                    href="tel:+919011096990"
+                    href="tel:+919049994679"
                     className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-brand-orange px-4 py-2 text-xs font-mono font-bold text-white shadow-xs transition-all hover:bg-brand-orange-dark active:scale-95 whitespace-nowrap"
                   >
                     Call Pune Hub

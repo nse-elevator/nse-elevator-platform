@@ -6,7 +6,7 @@ import { TimeOnPageTracker } from '../../components/TimeOnPageTracker';
 
 export const metadata: Metadata = {
   title: 'Contact NSE – New Sahyadri Elevator | 24/7 Breakdown Dispatch & AMC',
-  description: 'Connect with NSE – New Sahyadri Elevator. 24/7 Breakdown Dispatch & WhatsApp: +91 90110 96990. Email: office.pune@nsei.in. Offices in Navi Mumbai and Pune.',
+  description: 'Connect with NSE – New Sahyadri Elevator. 24/7 Breakdown Dispatch & WhatsApp: +91 90499 94679. Email: office.pune@nsei.in. Offices in Navi Mumbai and Pune.',
 };
 
 export default function ContactPage() {
@@ -49,10 +49,10 @@ export default function ContactPage() {
             </div>
             <div className="mt-8 pt-6 border-t border-slate-100 space-y-3">
               <a
-                href="tel:+919011096990"
+                href="tel:+919049994679"
                 className="w-full text-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3 min-h-[44px] flex items-center justify-center rounded-lg text-sm shadow-md transition-all"
               >
-                CALL / WHATSAPP: +91 90110 96990
+                CALL / WHATSAPP: +91 90499 94679
               </a>
               <span className="text-[11px] font-mono text-slate-500 text-center block">
                 Direct Email: <a href="mailto:office.pune@nsei.in" className="text-brand-orange underline font-medium">office.pune@nsei.in</a>
@@ -123,7 +123,7 @@ export default function ContactPage() {
               <span className="text-[10px] uppercase text-brand-orange font-bold block mb-1">Corporate Headquarters</span>
               <strong className="text-sm text-slate-900 block mb-2">Navi Mumbai (Airoli Hub)</strong>
               <p className="text-slate-700">Airoli, Navi Mumbai, Maharashtra</p>
-              <p className="mt-2 text-slate-900 font-bold">Phone / WhatsApp: +91 90110 96990</p>
+              <p className="mt-2 text-slate-900 font-bold">Phone / WhatsApp: +91 90499 94679</p>
               <p className="mt-1 text-slate-500">Service Coverage: Airoli, Vashi, Kopar Khairane, Mahape, Belapur, Panvel</p>
             </div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
                   Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
                 </p>
               </div>
-              <p className="mt-2 text-slate-900 font-bold">Phone / WhatsApp: +91 90110 96990</p>
+              <p className="mt-2 text-slate-900 font-bold">Phone / WhatsApp: +91 90499 94679</p>
               <p className="mt-1 text-slate-500">Service Coverage: Dattanagar, Katraj, Ambegaon, Dhankawadi, Sinhagad Rd, Kothrud</p>
             </div>
           </div>

@@ -7,7 +7,7 @@ export function EmergencyDispatchBanner() {
   const handleClick = () => {
     trackPhoneClick({
       location: 'top_emergency_banner',
-      phoneNumber: '+91 90110 96990',
+      phoneNumber: '+91 90499 94679',
       contactMethod: 'phone',
     });
     trackEmergencyCtaClick({
@@ -47,10 +47,10 @@ export function EmergencyDispatchBanner() {
         <div className="flex items-center gap-2 shrink-0">
           <a
             id="emergency-banner-call-btn"
-            href="tel:+919011096990"
+            href="tel:+919049994679"
             onClick={handleClick}
             className="bg-emergency-500 hover:bg-emergency-600 active:scale-[0.98] text-white font-bold px-3 py-1.5 rounded-sm focus-ring flex items-center gap-1.5 transition-all text-xs font-mono"
-            aria-label="Call Emergency Dispatch +91 90110 96990"
+            aria-label="Call Emergency Dispatch +91 90499 94679"
           >
             <svg 
               className="w-3.5 h-3.5 shrink-0" 
@@ -62,7 +62,7 @@ export function EmergencyDispatchBanner() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span>+91 90110 96990</span>
+            <span>+91 90499 94679</span>
           </a>
         </div>
       </div>

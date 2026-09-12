@@ -35,7 +35,7 @@ const ScrollDepthTracker = dynamic(
 export const metadata: Metadata = {
   title: 'NSE – New Sahyadri Elevator | Lift Maintenance, AMC & Repair in Navi Mumbai & Pune',
   description:
-    'Trusted partner for high-rise elevator operations — maintenance, repairs, modernization for residential societies and commercial complexes at ~30% lower cost than OEM direct. Call/WhatsApp +91 90110 96990.',
+    'Trusted partner for high-rise elevator operations — maintenance, repairs, modernization for residential societies and commercial complexes at ~30% lower cost than OEM direct. Call/WhatsApp +91 90499 94679.',
   keywords: [
     'elevator AMC Navi Mumbai',
     'lift repair Pune',

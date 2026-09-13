@@ -68,7 +68,7 @@ export default function AdminLeadsPage() {
       const result = await res.json();
 
       if (res.ok && result.success) {
-        setLeads(result.data);
+        setLeads(Array.isArray(result.data) ? result.data : []);
         setTotal(result.meta?.total || 0);
         setTotalPages(result.meta?.totalPages || 1);
       }

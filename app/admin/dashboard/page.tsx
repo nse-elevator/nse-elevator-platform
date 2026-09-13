@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import AnalyticsErrorBoundary from './AnalyticsErrorBoundary';
 
 const AnalyticsDashboardSection = dynamic(
   () => import('./AnalyticsDashboardSection'),
@@ -107,7 +108,7 @@ export default function AdminDashboardPage() {
   }
 
   const activePipeline =
-    stats.statusCounts.New + stats.statusCounts.Contacted + stats.statusCounts.Quoted;
+    (stats.statusCounts?.New || 0) + (stats.statusCounts?.Contacted || 0) + (stats.statusCounts?.Quoted || 0);
 
   return (
     <div className="space-y-8 max-w-7xl mx-auto">
@@ -147,7 +148,7 @@ export default function AdminDashboardPage() {
           </span>
           <div className="mt-2 flex items-baseline gap-2">
             <span className="text-3xl font-extrabold text-steel-950 font-mono">
-              {stats.leadsThisWeek}
+              {stats.leadsThisWeek ?? 0}
             </span>
             <span className="text-[11px] font-mono text-safety-600 font-bold">Past 7 Days</span>
           </div>
@@ -173,10 +174,10 @@ export default function AdminDashboardPage() {
           </span>
           <div className="mt-2 flex items-baseline gap-2">
             <span className="text-3xl font-extrabold text-safety-600 font-mono">
-              {stats.statusCounts.Converted}
+              {stats.statusCounts?.Converted || 0}
             </span>
             <span className="text-[11px] font-mono text-steel-400">
-              ({stats.totalLeads > 0 ? Math.round((stats.statusCounts.Converted / stats.totalLeads) * 100) : 0}% rate)
+              ({stats.totalLeads > 0 ? Math.round(((stats.statusCounts?.Converted || 0) / stats.totalLeads) * 100) : 0}% rate)
             </span>
           </div>
           <p className="text-[11px] text-steel-500 mt-1">Active won elevator care contracts</p>
@@ -188,7 +189,7 @@ export default function AdminDashboardPage() {
           </span>
           <div className="mt-2 flex items-baseline gap-2">
             <span className="text-3xl font-extrabold text-steel-950 font-mono">
-              {stats.totalLeads}
+              {stats.totalLeads ?? 0}
             </span>
             <span className="text-[11px] font-mono text-steel-400">Cumulative</span>
           </div>
@@ -203,7 +204,7 @@ export default function AdminDashboardPage() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 font-mono">
           {(['New', 'Contacted', 'Quoted', 'Converted', 'Lost'] as const).map((st) => {
-            const count = stats.statusCounts[st] || 0;
+            const count = stats.statusCounts?.[st] || 0;
             const style = statusColors[st];
             return (
               <div
@@ -230,7 +231,7 @@ export default function AdminDashboardPage() {
           <h2 className="text-sm font-bold text-steel-900 font-mono uppercase tracking-wider mb-4">
             Top 5 Source Channels by Volume
           </h2>
-          {stats.topSources.length === 0 ? (
+          {!stats.topSources || stats.topSources.length === 0 ? (
             <p className="text-xs font-mono text-steel-400">No lead sources tracked yet.</p>
           ) : (
             <div className="space-y-3 font-mono">
@@ -302,7 +303,9 @@ export default function AdminDashboardPage() {
       </div>
 
       {/* Conversion Analytics & Demand Telemetry Section */}
-      <AnalyticsDashboardSection />
+      <AnalyticsErrorBoundary>
+        <AnalyticsDashboardSection />
+      </AnalyticsErrorBoundary>
 
       {/* Recent Leads Activity Feed */}
       <div className="bg-white border border-steel-300 rounded-sm shadow-milled overflow-hidden">
@@ -321,7 +324,7 @@ export default function AdminDashboardPage() {
           </Link>
         </div>
 
-        {stats.recentLeads.length === 0 ? (
+        {!stats.recentLeads || stats.recentLeads.length === 0 ? (
           <div className="p-8 text-center text-xs font-mono text-steel-400">
             No leads recorded in database yet.
           </div>
@@ -338,7 +341,7 @@ export default function AdminDashboardPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-steel-100">
-                {stats.recentLeads.map((lead) => {
+                {(stats.recentLeads || []).map((lead) => {
                   const style = statusColors[lead.status] || statusColors.New;
                   return (
                     <tr key={lead._id} className="hover:bg-steel-50/50 transition-colors">

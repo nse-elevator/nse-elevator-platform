@@ -93,11 +93,11 @@ export default function AnalyticsDashboardSection() {
     );
   }
 
-  if (error || !data) {
+  if (error || !data || !data.summary) {
     return (
       <div className="bg-white border border-steel-300 rounded-sm p-6 text-xs text-steel-700">
         <div className="flex items-center justify-between">
-          <span className="text-emergency-500 font-bold">Failed to load analytics: {error}</span>
+          <span className="text-emergency-500 font-bold">Failed to load analytics: {error || 'Telemetry data unavailable'}</span>
           <button
             onClick={() => fetchAnalytics(true)}
             className="px-3 py-1 bg-steel-900 text-white rounded-sm font-mono text-xs"
@@ -145,7 +145,7 @@ export default function AnalyticsDashboardSection() {
         <div className="bg-white border border-steel-300 rounded-sm p-4 shadow-milled">
           <span className="text-[10px] font-mono uppercase text-steel-500 block font-bold">Past 30d Leads</span>
           <span className="text-xl font-extrabold font-mono text-steel-950 mt-1 block">
-            {data.summary.totalLeads30d}
+            {data.summary?.totalLeads30d ?? 0}
           </span>
           <span className="text-[10px] text-safety-600 font-bold font-mono mt-1 block">
             Inbound pipeline
@@ -155,7 +155,7 @@ export default function AnalyticsDashboardSection() {
         <div className="bg-white border border-steel-300 rounded-sm p-4 shadow-milled">
           <span className="text-[10px] font-mono uppercase text-steel-500 block font-bold">Telemetry Events</span>
           <span className="text-xl font-extrabold font-mono text-steel-950 mt-1 block">
-            {data.summary.totalEvents30d}
+            {data.summary?.totalEvents30d ?? 0}
           </span>
           <span className="text-[10px] text-steel-500 font-mono mt-1 block">
             Clicks &amp; funnels
@@ -165,7 +165,7 @@ export default function AnalyticsDashboardSection() {
         <div className="bg-white border border-steel-300 rounded-sm p-4 shadow-milled">
           <span className="text-[10px] font-mono uppercase text-steel-500 block font-bold">Conversion Rate</span>
           <span className="text-xl font-extrabold font-mono text-emergency-500 mt-1 block">
-            {data.summary.estimatedConversionRate}
+            {data.summary?.estimatedConversionRate ?? '0.0%'}
           </span>
           <span className="text-[10px] text-steel-500 font-mono mt-1 block">
             Visitor to lead
@@ -175,7 +175,7 @@ export default function AnalyticsDashboardSection() {
         <div className="bg-white border border-steel-300 rounded-sm p-4 shadow-milled">
           <span className="text-[10px] font-mono uppercase text-steel-500 block font-bold">Total Database Leads</span>
           <span className="text-xl font-extrabold font-mono text-steel-950 mt-1 block">
-            {data.summary.totalLeads}
+            {data.summary?.totalLeads ?? 0}
           </span>
           <span className="text-[10px] text-steel-500 font-mono mt-1 block">
             Lifetime CRM
@@ -185,7 +185,7 @@ export default function AnalyticsDashboardSection() {
         <div className="bg-white border border-steel-300 rounded-sm p-4 shadow-milled">
           <span className="text-[10px] font-mono uppercase text-steel-500 block font-bold">First Contact SLA</span>
           <span className="text-xl font-extrabold font-mono text-safety-600 mt-1 block">
-            {data.summary.avgTimeToContact || '18 mins'}
+            {data.summary?.avgTimeToContact || '18 mins'}
           </span>
           <span className="text-[10px] text-steel-500 font-mono mt-1 block">
             Average response time
@@ -195,7 +195,7 @@ export default function AnalyticsDashboardSection() {
         <div className="bg-white border border-steel-300 rounded-sm p-4 shadow-milled">
           <span className="text-[10px] font-mono uppercase text-steel-500 block font-bold">High Quality Leads</span>
           <span className="text-xl font-extrabold font-mono text-steel-950 mt-1 block">
-            {data.summary.highQualityLeadPct || '65%'}
+            {data.summary?.highQualityLeadPct || '65%'}
           </span>
           <span className="text-[10px] text-safety-600 font-bold font-mono mt-1 block">
             Score 80-100 index

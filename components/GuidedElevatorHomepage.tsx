@@ -444,10 +444,10 @@ export function GuidedElevatorHomepage() {
                     Schindler Lifts
                   </span>
                   <span className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-brand-orange hover:text-brand-orange hover:shadow-md">
-                    KONE MonoSpace
+                    KONE
                   </span>
                   <span className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-brand-orange hover:text-brand-orange hover:shadow-md">
-                    OTIS Gen2
+                    OTIS
                   </span>
                   <span className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-brand-orange hover:text-brand-orange hover:shadow-md">
                     Johnson Lifts
@@ -975,7 +975,7 @@ export function GuidedElevatorHomepage() {
                       </span>
                     </div>
                     <h3 className="font-bold text-slate-900 text-lg">Mayflower Residency CHS</h3>
-                    <p className="font-mono text-xs text-zinc-400 mt-1">4 Passenger Lifts • Kothrud, Pune</p>
+                    <p className="font-mono text-xs text-zinc-400 mt-1">4 Passenger Lifts • Pune, Maharashtra</p>
                     <p className="text-slate-600 transition-colors group-hover:text-slate-900 mt-2 text-sm leading-relaxed text-justify">
                       Emergency safety remediation and ARD battery bank restoration within 72 hours, delivering 100% fail-safe passenger rescue.
                     </p>

@@ -92,7 +92,7 @@ router.get('/summary', async (req: Request, res: Response, next: NextFunction) =
               'Navi Mumbai Hub',
               {
                 $cond: [
-                  { $regexMatch: { input: '$address', regex: /pune|pcmc|katraj|kothrud|baner|wakad|hadapsar/i } },
+                  { $regexMatch: { input: '$address', regex: /pune|pcmc|baner|wakad|hadapsar/i } },
                   'Pune Operational Branch',
                   {
                     $cond: [

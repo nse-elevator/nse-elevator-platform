@@ -113,7 +113,8 @@ export async function getTestimonials() {
 
 // 8. Lead Capture API
 export async function submitLead(leadData: Record<string, any>) {
-  const res = await fetch(`${API_BASE_URL}/leads`, {
+  const endpoint = typeof window !== 'undefined' ? '/api/leads' : `${API_BASE_URL}/leads`;
+  const res = await fetch(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(leadData),

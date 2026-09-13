@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-
-const BACKEND_URL = process.env.BACKEND_INTERNAL_URL || 'http://127.0.0.1:5000';
+import jwt from 'jsonwebtoken';
+import { connectToDatabase } from '../../../../lib/db';
+import { User } from '../../../../server/src/models/User';
+import { config } from '../../../../server/src/config/env';
 
 export async function GET() {
   const token = cookies().get('admin_token')?.value;
@@ -17,21 +19,43 @@ export async function GET() {
   }
 
   try {
-    const res = await fetch(`${BACKEND_URL}/api/admin/auth/me`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const decoded = jwt.verify(token, config.JWT_SECRET) as {
+      id: string;
+      email: string;
+      role: string;
+    };
+
+    await connectToDatabase();
+    const user = await User.findById(decoded.id).select('-passwordHash');
+
+    if (!user || user.role !== 'admin') {
+      return NextResponse.json(
+        {
+          success: false,
+          error: { code: 'FORBIDDEN', message: 'User not found or insufficient privileges' },
+        },
+        { status: 403 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      data: {
+        user: {
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+        },
       },
     });
-
-    const data = await res.json();
-    return NextResponse.json(data, { status: res.status });
   } catch (error) {
     return NextResponse.json(
       {
         success: false,
-        error: { code: 'SERVER_ERROR', message: 'Failed to verify session' },
+        error: { code: 'UNAUTHENTICATED', message: 'Session expired or invalid' },
       },
-      { status: 500 }
+      { status: 401 }
     );
   }
 }

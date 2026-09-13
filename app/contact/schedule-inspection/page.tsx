@@ -10,7 +10,7 @@ export default function ScheduleInspectionPage() {
     buildingName: '',
     address: '',
     city: '',
-    state: 'IL',
+    state: 'Maharashtra',
     elevatorCount: '2',
     preferredDate: '',
     contactName: '',
@@ -18,10 +18,34 @@ export default function ScheduleInspectionPage() {
     contactEmail: '',
     violationNotice: false,
   });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.contactName,
+          email: formData.contactEmail,
+          phone: formData.contactPhone,
+          buildingName: formData.buildingName,
+          address: `${formData.address}${formData.city ? ', ' + formData.city : ''}`,
+          propertyType: 'Co-operative Housing Society (CHS)',
+          elevatorCount: parseInt(formData.elevatorCount, 10) || 1,
+          serviceUrgency: 'inspection',
+          message: `Inspection Requirement: ${formData.inspectionType}. Preferred Date: ${formData.preferredDate || 'Earliest available'}. Violation Notice: ${formData.violationNotice ? 'Yes' : 'No'}`,
+          source: '/contact/schedule-inspection',
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -171,9 +195,10 @@ export default function ScheduleInspectionPage() {
 
               <button
                 type="submit"
-                className="w-full min-h-[44px] bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-3.5 rounded-lg text-sm transition-all shadow-md active:scale-[0.99] cursor-pointer"
+                disabled={submitting}
+                className="w-full min-h-[44px] bg-brand-orange hover:bg-brand-orange-dark disabled:opacity-60 text-white font-semibold py-3.5 rounded-lg text-sm transition-all shadow-md active:scale-[0.99] cursor-pointer"
               >
-                Schedule Code Compliance Inspection →
+                {submitting ? 'Submitting Inspection Request...' : 'Schedule Code Compliance Inspection →'}
               </button>
             </form>
           )}

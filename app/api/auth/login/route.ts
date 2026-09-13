@@ -1,27 +1,91 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-
-const BACKEND_URL = process.env.BACKEND_INTERNAL_URL || 'http://127.0.0.1:5000';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import { connectToDatabase } from '../../../../lib/db';
+import { User } from '../../../../server/src/models/User';
+import { config } from '../../../../server/src/config/env';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const body = await req.json().catch(() => ({}));
+    const email = (body.email || '').trim().toLowerCase();
+    const password = body.password || '';
 
-    const response = await fetch(`${BACKEND_URL}/api/admin/auth/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    });
-
-    const result = await response.json();
-
-    if (!response.ok || !result.success || !result.data?.token) {
-      return NextResponse.json(result, { status: response.status });
+    if (!email || !password) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: {
+            code: 'VALIDATION_ERROR',
+            message: 'Email and password are required',
+          },
+        },
+        { status: 422 }
+      );
     }
 
-    const token = result.data.token;
+    // Connect directly to MongoDB Atlas
+    await connectToDatabase();
+
+    // Look up user by email
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: {
+            code: 'INVALID_CREDENTIALS',
+            message: 'Invalid email or password',
+          },
+        },
+        { status: 401 }
+      );
+    }
+
+    // Verify bcrypt password hash
+    const isPasswordValid = await bcrypt.compare(password, user.passwordHash);
+
+    if (!isPasswordValid) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: {
+            code: 'INVALID_CREDENTIALS',
+            message: 'Invalid email or password',
+          },
+        },
+        { status: 401 }
+      );
+    }
+
+    // Verify admin role
+    if (user.role !== 'admin') {
+      return NextResponse.json(
+        {
+          success: false,
+          error: {
+            code: 'FORBIDDEN',
+            message: 'Access denied. Account does not have administrative privileges.',
+          },
+        },
+        { status: 403 }
+      );
+    }
+
+    // Generate JWT access token (8h expiry)
+    const token = jwt.sign(
+      {
+        id: user._id.toString(),
+        email: user.email,
+        role: user.role,
+      },
+      config.JWT_SECRET,
+      {
+        expiresIn: (config.JWT_EXPIRES_IN || '8h') as any,
+      }
+    );
 
     // Secure cookie only if accessed via HTTPS protocol
     const isHttps = req.nextUrl.protocol === 'https:' || req.headers.get('x-forwarded-proto') === 'https';
@@ -35,21 +99,27 @@ export async function POST(req: NextRequest) {
       maxAge: 8 * 60 * 60, // 8 hours in seconds
     });
 
-    // Return user info to client without exposing JWT in response body to client-side scripts
     return NextResponse.json({
       success: true,
       data: {
-        user: result.data.user,
+        token,
+        user: {
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+        },
         message: 'Authentication successful',
       },
     });
   } catch (error) {
+    console.error('[Admin Login Error]:', error);
     return NextResponse.json(
       {
         success: false,
         error: {
           code: 'AUTH_SERVER_ERROR',
-          message: (error as Error).message || 'Authentication server unreachable',
+          message: (error as Error).message || 'Authentication service error',
         },
       },
       { status: 500 }

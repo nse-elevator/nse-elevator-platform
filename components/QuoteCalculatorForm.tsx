@@ -220,8 +220,7 @@ export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormPro
       try {
         const attr = getUrlAttribution();
         const anonymousId = getAnonymousId();
-        const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000/api';
-        const res = await fetch(`${apiBase}/leads`, {
+        const res = await fetch('/api/leads', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

@@ -114,7 +114,7 @@ export function ServiceHero({
           {/* Primary / Secondary Conversion Actions */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
             <Link
-              href="/contact/request-maintenance-quote"
+              href={serviceSlug ? `/contact/request-maintenance-quote?service=${serviceSlug}` : '/contact/request-maintenance-quote'}
               prefetch={true}
               className="min-h-[44px] bg-brand-orange hover:bg-brand-orange-dark active:scale-[0.98] text-white font-semibold px-6 py-3.5 rounded-md text-sm shadow-md transition-all flex items-center justify-center gap-2"
             >

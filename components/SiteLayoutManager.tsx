@@ -67,8 +67,19 @@ export function SiteLayoutManager({ children }: { children: React.ReactNode }) {
       });
     }, 50);
 
+    // Safety fallback: reveal any dynamically loaded or late-rendered cards
+    const safetyTimer = setTimeout(() => {
+      const remaining = document.querySelectorAll<HTMLElement>(
+        '[data-stagger-grid] > *:not(.is-visible), [data-card-unit]:not(.is-visible), .service-card-entrance:not(.is-visible)'
+      );
+      remaining.forEach((card) => {
+        card.classList.add('is-visible');
+      });
+    }, 350);
+
     return () => {
       clearTimeout(timer);
+      clearTimeout(safetyTimer);
       intersectionObserver.disconnect();
     };
   }, [pathname, isAdmin]);

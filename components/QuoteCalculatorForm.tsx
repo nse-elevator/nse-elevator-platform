@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import {
   trackQuoteFormSubmit,
   trackQuoteStepViewed,
@@ -62,11 +63,75 @@ const scopeOptions = [
   },
 ];
 
+const serviceSlugMap: Record<
+  string,
+  { scope: string; buildingType?: string; equipmentType?: string; label: string }
+> = {
+  'elevator-maintenance': {
+    scope: 'maintenance',
+    label: 'Preventive Elevator Maintenance (AMC)',
+  },
+  'elevator-repair': {
+    scope: 'repair',
+    label: '24/7 Breakdown & Emergency Repair',
+  },
+  'elevator-modernization': {
+    scope: 'modernization',
+    label: 'Turnkey Lift Modernization & Upgrades',
+  },
+  'safety-inspections-code-compliance': {
+    scope: 'inspection',
+    label: 'Lift Safety Audits & Compliance Testing',
+  },
+  'elevator-cab-remodeling': {
+    scope: 'modernization',
+    label: 'Elevator Cab Interior Remodeling & Upgrades',
+  },
+  'hydraulic-traction-conversions': {
+    scope: 'repair',
+    equipmentType: 'hydraulic',
+    label: 'Hydraulic & Traction Conversions & Overhauls',
+  },
+  'non-proprietary-elevator-service': {
+    scope: 'maintenance',
+    label: 'Multi-Brand Maintenance with Genuine OEM Spares',
+  },
+  'elevator-installation': {
+    scope: 'modernization',
+    label: 'New Elevator Design & Turnkey Installation',
+  },
+  'commercial-elevator-services': {
+    scope: 'maintenance',
+    buildingType: 'commercial',
+    label: 'Commercial Elevator Solutions',
+  },
+  'residential-elevator-services': {
+    scope: 'maintenance',
+    buildingType: 'residential',
+    label: 'Residential High-Rise Solutions',
+  },
+  'hydraulic-elevator-services': {
+    scope: 'maintenance',
+    equipmentType: 'hydraulic',
+    label: 'Hydraulic Elevator Engineering',
+  },
+  'freight-elevator-services': {
+    scope: 'maintenance',
+    buildingType: 'industrial',
+    equipmentType: 'freight',
+    label: 'Freight & Material Lift Services',
+  },
+};
+
 interface QuoteCalculatorFormProps {
   embedded?: boolean;
 }
 
-export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormProps) {
+function QuoteCalculatorFormInner({ embedded = false }: QuoteCalculatorFormProps) {
+  const searchParams = useSearchParams();
+  const serviceParam = searchParams?.get('service') || searchParams?.get('type') || '';
+  const [selectedServiceLabel, setSelectedServiceLabel] = useState<string | null>(null);
+
   const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -87,6 +152,41 @@ export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormPro
     contactEmail: '',
     contactPhone: '',
   });
+
+  // Pre-populate service scope based on URL query parameter
+  useEffect(() => {
+    if (!serviceParam) return;
+    const cleanParam = serviceParam.toLowerCase().trim();
+    const match = serviceSlugMap[cleanParam];
+
+    if (match) {
+      setSelectedServiceLabel(match.label);
+      setFormData((prev) => ({
+        ...prev,
+        serviceScope: match.scope,
+        ...(match.buildingType ? { buildingType: match.buildingType } : {}),
+        ...(match.equipmentType ? { equipmentType: match.equipmentType } : {}),
+      }));
+    } else if (cleanParam.includes('repair') || cleanParam.includes('breakdown')) {
+      setSelectedServiceLabel('24/7 Breakdown & Emergency Repair');
+      setFormData((prev) => ({ ...prev, serviceScope: 'repair' }));
+    } else if (cleanParam.includes('modern') || cleanParam.includes('remodel') || cleanParam.includes('install')) {
+      setSelectedServiceLabel('Elevator Modernization & Upgrades');
+      setFormData((prev) => ({ ...prev, serviceScope: 'modernization' }));
+    } else if (cleanParam.includes('inspect') || cleanParam.includes('audit') || cleanParam.includes('safety')) {
+      setSelectedServiceLabel('Safety Audit & Compliance Inspections');
+      setFormData((prev) => ({ ...prev, serviceScope: 'inspection' }));
+    } else if (cleanParam.includes('maint') || cleanParam.includes('amc')) {
+      setSelectedServiceLabel('Preventive Elevator Maintenance (AMC)');
+      setFormData((prev) => ({ ...prev, serviceScope: 'maintenance' }));
+    } else {
+      const formatted = cleanParam
+        .split('-')
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(' ');
+      setSelectedServiceLabel(formatted);
+    }
+  }, [serviceParam]);
 
   // Track initial Step 1 view on mount
   useEffect(() => {
@@ -232,7 +332,8 @@ export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormPro
             propertyType: formData.buildingType,
             elevatorCount: formData.elevatorCount,
             serviceUrgency: formData.serviceScope,
-            source: '/contact/request-maintenance-quote',
+            source: serviceParam ? `/contact/request-maintenance-quote?service=${serviceParam}` : '/contact/request-maintenance-quote',
+            message: selectedServiceLabel ? `Requested Service: ${selectedServiceLabel}` : '',
             gclid: attr.gclid,
             fbclid: attr.fbclid,
             anonymousId,
@@ -278,6 +379,28 @@ export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormPro
 
   const formContent = (
     <>
+      {/* Service Selection Notification Pill if pre-selected via service page */}
+      {selectedServiceLabel && (
+        <div className="mb-6 p-3.5 sm:p-4 bg-orange-50/90 border border-brand-orange/30 rounded-xl flex items-center justify-between gap-3 text-xs shadow-xs">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-orange shrink-0 animate-pulse" />
+            <span className="text-slate-800 font-medium truncate">
+              Service Selected: <strong className="text-brand-orange font-bold font-mono">{selectedServiceLabel}</strong>
+            </span>
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              setSelectedServiceLabel(null);
+              setCurrentStep(2);
+            }}
+            className="text-[11px] font-mono text-brand-orange hover:text-brand-orange-dark font-bold underline shrink-0 cursor-pointer"
+          >
+            Change Service
+          </button>
+        </div>
+      )}
+
       {/* Mechanical Step Progress Track Indicator */}
       <div className="mb-8 pb-6 border-b border-slate-100">
             {/* Step Badges and Labels */}
@@ -614,11 +737,28 @@ export function QuoteCalculatorForm({ embedded = false }: QuoteCalculatorFormPro
           </p>
         </div>
 
-        {/* Form Container */}
-        <div data-card-unit className="bg-white border border-slate-200/80 rounded-2xl shadow-sm p-4 sm:p-10 text-slate-800">
+        {/* Form Container (data-card-unit removed to prevent any opacity:0 stuck state) */}
+        <div className="bg-white border border-slate-200/80 rounded-2xl shadow-sm p-4 sm:p-10 text-slate-800">
           {formContent}
         </div>
       </div>
     </section>
   );
 }
+
+export function QuoteCalculatorForm(props: QuoteCalculatorFormProps) {
+  return (
+    <Suspense
+      fallback={
+        <div className="w-full max-w-4xl mx-auto p-12 text-center">
+          <div className="inline-block w-8 h-8 border-4 border-brand-orange border-t-transparent rounded-full animate-spin mb-4" />
+          <p className="text-slate-600 font-mono text-sm">Loading Quote Assessment Engine...</p>
+        </div>
+      }
+    >
+      <QuoteCalculatorFormInner {...props} />
+    </Suspense>
+  );
+}
+
+export default QuoteCalculatorForm;

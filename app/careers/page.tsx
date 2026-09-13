@@ -11,7 +11,7 @@ const jobOpenings = [
   {
     slug: 'senior-elevator-service-mechanic',
     title: 'Senior Lift Maintenance Engineer',
-    location: 'Pune (Dattanagar & Katraj Corridors)',
+    location: 'Pune (PCMC & Western Corridors)',
     type: 'Full-Time / Field Operations',
     salary: '₹3,60,000 - ₹5,40,000 / Year + Emergency Allowance',
     summary: 'Seeking experienced lift maintenance engineers to manage residential society and commercial service routes across South Pune.',

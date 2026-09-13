@@ -128,18 +128,11 @@ export default function ContactPage() {
             </div>
 
             <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-              <span className="text-[10px] uppercase text-brand-orange font-bold block mb-1">Regional Branch</span>
-              <strong className="text-sm text-slate-900 block mb-2">Pune (Dattanagar Hub)</strong>
-              <div className="p-3 bg-orange-50/80 border border-brand-orange/30 rounded-lg mb-2">
-                <span className="text-[10px] font-mono text-brand-orange font-bold uppercase tracking-wider block mb-0.5">
-                  📍 Pune Operations Hub
-                </span>
-                <p className="text-slate-900 font-semibold text-xs font-sans">
-                  Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
-                </p>
-              </div>
+              <span className="text-[10px] uppercase text-brand-orange font-bold block mb-1">Regional Operations</span>
+              <strong className="text-sm text-slate-900 block mb-2">Pune Operations Hub</strong>
+              <p className="text-slate-700">Pune, Maharashtra</p>
               <p className="mt-2 text-slate-900 font-bold">Phone / WhatsApp: +91 90499 94679</p>
-              <p className="mt-1 text-slate-500">Service Coverage: Dattanagar, Katraj, Ambegaon, Dhankawadi, Sinhagad Rd, Kothrud</p>
+              <p className="mt-1 text-slate-500">Service Coverage: Hinjewadi, Baner, Wakad, Hadapsar, PCMC &amp; Western Corridors</p>
             </div>
           </div>
         </div>

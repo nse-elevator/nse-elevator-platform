@@ -45,7 +45,7 @@ export function ContactFloor() {
                   </div>
                   <div className="pt-2 border-t border-slate-200">
                     <h4 className="font-bold text-slate-900 text-sm">Pune Operations Depot</h4>
-                    <p className="text-slate-600 text-xs mt-0.5">Dattanagar, Pune, Maharashtra</p>
+                    <p className="text-slate-600 text-xs mt-0.5">Pune, Maharashtra</p>
                   </div>
                   <div className="pt-2 border-t border-slate-200">
                     <span className="text-xs font-mono text-zinc-400">Email: office.pune@nsei.in</span>

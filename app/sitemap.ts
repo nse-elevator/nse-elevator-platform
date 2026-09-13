@@ -15,7 +15,7 @@ const serviceSlugs = [
 
 const locationSlugs = [
   'elevator-repair-navi-mumbai',
-  'elevator-repair-pune-dattanagar',
+  'elevator-repair-pune',
 ];
 
 const industrySlugs = [
@@ -83,7 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // 3. Location Pages (2: Navi Mumbai and Pune Dattanagar)
+  // 3. Location Pages (2: Navi Mumbai and Pune)
   const locationRoutes: MetadataRoute.Sitemap = locationSlugs.map((slug) => ({
     url: `${BASE_URL}/locations/${slug}`,
     lastModified: now,

@@ -1,37 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-const testimonials = [
-  {
-    name: 'Sunil Deshmukh',
-    role: 'Society Secretary',
-    org: 'Sai Saburi CHS, Airoli',
-    text: 'NSE rescued our 12-floor building after our previous OEM direct service gave terrible callback delays. Their technician arrived within 20 minutes and permanently fixed our recurring door drive issue.',
-    date: '1 month ago',
-  },
-  {
-    name: 'Rajesh Patil',
-    role: 'Facility Director',
-    org: 'Swant Plaza Commercial Hub, Pune',
-    text: 'Transparent billing and genuine OEM spare parts. We migrated 4 high-speed commercial passenger elevators to NSE Comprehensive AMC and reduced society operational costs by 35% while improving uptime.',
-    date: '3 months ago',
-  },
-  {
-    name: 'Dr. Meera Kulkarni',
-    role: 'Chief Medical Administrator',
-    org: 'Apex Multi-Specialty Hospital, Vashi',
-    text: 'In a hospital, stretcher lift reliability is a matter of life and safety. NSE engineers maintain our bed elevators flawlessly with monthly 25-point routines and immediate emergency priority.',
-    date: '6 months ago',
-  },
-  {
-    name: 'Anand Shinde',
-    role: 'Managing Committee Chairman',
-    org: 'Mayflower Residency, Kothrud, Pune',
-    text: 'Our 14-year-old geared elevators suffered recurring breakdown issues under our previous contractor. NSE performed precision brake relining, counterweight rebalancing, and restored reliable, smooth operation in 48 hours.',
-    date: '8 months ago',
-  },
-];
-
 export function ServicesFloor() {
   return (
     <div data-floor="services" id="floor-services" className="relative flex min-h-screen flex-col bg-slate-50/50 border-t border-slate-200/60">
@@ -205,61 +174,6 @@ export function ServicesFloor() {
               >
                 All Services Directory
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TRANSITION BAR 2: WHAT CLIENTS SAY */}
-      <section id="reviews" className="transition-floor-bar relative">
-        <div className="absolute inset-0 z-0 bg-slate-100/95 border-y border-slate-200" aria-hidden="true" />
-        <div className="transition-floor-bar__inner relative z-10 lg:pr-12">
-          <div className="mx-auto w-full text-center max-w-6xl">
-            <div className="reviews-carousel">
-              <div className="mb-2 flex flex-col items-center gap-0.5">
-                <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 fill-brand-orange text-brand-orange">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                  ))}
-                </div>
-                <h2 className="text-lg font-bold text-slate-900 md:text-xl">What Our Clients Say</h2>
-                <p className="text-xs text-slate-500">4.9 stars · 120+ verified client reviews</p>
-              </div>
-
-              <div className="relative">
-                <div className="reviews-carousel__viewport">
-                  <div className="reviews-carousel__track">
-                    {testimonials.map((t, idx) => (
-                      <div key={idx} className="reviews-carousel__slide">
-                        <div className="reviews-carousel__card">
-                          <div style={{ marginBottom: '8px' }}>
-                            <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
-                              {[...Array(5)].map((_, i) => (
-                                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-2.5 w-2.5 fill-brand-orange text-brand-orange">
-                                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                                </svg>
-                              ))}
-                            </div>
-                          </div>
-                          <p className="reviews-carousel__text">“{t.text}”</p>
-                          <div className="reviews-carousel__meta">
-                            <p className="reviews-carousel__name">{t.name} ({t.org})</p>
-                            <span className="reviews-carousel__date">{t.date}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <p className="mt-1.5 text-center">
-                <Link href="/testimonials" className="text-[11px] font-medium text-brand-orange/90 underline-offset-2 transition-colors hover:text-brand-orange hover:underline">
-                  Read all reviews →
-                </Link>
-              </p>
             </div>
           </div>
         </div>

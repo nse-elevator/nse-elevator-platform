@@ -210,7 +210,7 @@ export const adminContentConfigs: Record<string, AdminContentConfig> = {
       { name: 'slug', label: 'URL Slug', type: 'text' },
       { name: 'city', label: 'City', type: 'text', required: true, defaultValue: 'Pune' },
       { name: 'state', label: 'State', type: 'text', required: true, defaultValue: 'Maharashtra' },
-      { name: 'location', label: 'Branch / Location', type: 'text', required: true, defaultValue: 'Pune (Dattanagar & Katraj Corridors)' },
+      { name: 'location', label: 'Branch / Location', type: 'text', required: true, defaultValue: 'Pune (PCMC & Western Corridors)' },
       { name: 'employmentType', label: 'Employment Type', type: 'text', defaultValue: 'FULL_TIME' },
       { name: 'description', label: 'Job Description', type: 'textarea', required: true },
       { name: 'responsibilities', label: 'Key Responsibilities (comma-separated)', type: 'stringArray' },

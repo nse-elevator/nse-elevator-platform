@@ -643,7 +643,7 @@ export default function AnalyticsDashboardSection() {
                 Operational Coverage Match
               </span>
               <p className="text-xs text-steel-700 mt-1 leading-relaxed">
-                Traffic alignment with NSE field engineer dispatch stations (Airoli HQ &amp; Dattanagar Pune Hub).
+                Traffic alignment with NSE field engineer dispatch stations (Airoli HQ &amp; Pune Hub).
               </p>
             </div>
 

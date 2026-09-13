@@ -38,7 +38,7 @@ export function EmergencyDispatchBanner() {
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-safety-500" aria-hidden="true" />
           <span>Emergency Dispatch: <strong className="text-white font-mono">24/7 Rapid Response</strong></span>
           <span className="text-steel-600">|</span>
-          <span className="text-steel-400">Navi Mumbai • Pune (Dattanagar)</span>
+          <span className="text-steel-400">Navi Mumbai • Pune</span>
           <span className="text-steel-600">|</span>
           <span className="text-safety-400 font-mono text-[11px]">Rapid Response Dispatch</span>
         </div>

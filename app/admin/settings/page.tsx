@@ -25,7 +25,7 @@ export default function AdminSettingsPage() {
     emergencyBannerText: 'NSE 24/7 Breakdown Dispatch • Rapid Emergency Response Across Corridors',
     emergencyResponseWindow: '24/7 Rapid Response',
     headOfficeAddress: 'Airoli, Navi Mumbai, Maharashtra',
-    puneBranch1Address: 'Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046',
+    puneBranch1Address: 'Pune Regional Operations Depot, Pune, Maharashtra – 411046',
     businessHours: '24/7 Emergency Dispatch • Office Mon–Sat 9:00 AM – 7:00 PM',
   });
 
@@ -232,7 +232,7 @@ export default function AdminSettingsPage() {
 
             <div>
               <label className="block font-mono uppercase font-bold text-steel-700 mb-1">
-                Pune Branch Office (Dattanagar, Pune)
+                Pune Regional Operations Hub (Pune, Maharashtra)
               </label>
               <input
                 type="text"

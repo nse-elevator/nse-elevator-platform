@@ -50,7 +50,7 @@ const fallbackCaseStudies: CaseStudyItem[] = [
   {
     slug: 'mayflower-residency-safety-audit',
     buildingName: 'Mayflower Residency CHS',
-    city: 'Dattanagar, Pune',
+    city: 'Pune, Maharashtra',
     units: '6 Passenger Elevators (12 Floors)',
     angleTag: 'Safety & ARD Overhaul',
     resultsSummary: 'Restored failing ARD power units within 14 days, achieved 100% successful emergency battery landings during power cut simulations, and eliminated sudden passenger entrapment risks.',

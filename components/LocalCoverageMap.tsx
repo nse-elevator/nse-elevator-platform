@@ -33,14 +33,13 @@ const metroRegions: MetroRegion[] = [
     lng: 72.9986,
   },
   {
-    id: 'pune-dattanagar',
-    name: 'Pune Branch Office (Dattanagar)',
+    id: 'pune',
+    name: 'Pune Operations Hub',
     stateCode: 'MH',
-    hqAddress: 'Dattanagar, Pune, Maharashtra',
+    hqAddress: 'Pune, Maharashtra',
     phone: '+91 90499 94679',
     avgResponseMins: 30,
     coveredCounties: [
-      'Dattanagar',
       'Katraj',
       'Ambegaon',
       'Dhankawadi',
@@ -151,7 +150,7 @@ export function LocalCoverageMap() {
         } else {
           setSelectedMetro(metroRegions[1]);
           setDistanceResult({
-            nearestHub: 'Pune Operations Hub (Dattanagar)',
+            nearestHub: 'Pune Operations Hub',
             distanceKm: distPune,
             arrivalEstimate: 'Priority Dispatch Active',
           });
@@ -430,7 +429,7 @@ export function LocalCoverageMap() {
               <div className="space-y-4 mt-6 text-xs">
                 <div>
                   <span className="text-slate-500 font-mono uppercase block text-[10px]">Office Location:</span>
-                  {selectedMetro.id === 'pune-dattanagar' ? (
+                  {selectedMetro.id === 'pune' ? (
                     <div className="mt-1.5 p-2.5 bg-orange-50/80 border border-brand-orange/30 rounded-lg">
                       <div className="flex items-center gap-1.5 mb-1">
                         <span className="text-xs">📍</span>
@@ -439,7 +438,7 @@ export function LocalCoverageMap() {
                         </span>
                       </div>
                       <p className="text-slate-900 font-semibold text-xs leading-snug">
-                        Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
+                        Pune Regional Operations Depot, Pune, Maharashtra
                       </p>
                     </div>
                   ) : (

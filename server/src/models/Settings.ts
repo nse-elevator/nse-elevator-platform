@@ -33,7 +33,7 @@ const SettingsSchema: Schema = new Schema(
     },
     puneBranch1Address: {
       type: String,
-      default: 'Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046',
+      default: 'Pune Regional Operations Depot, Pune, Maharashtra – 411046',
     },
     businessHours: {
       type: String,

@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
               <p className="font-bold uppercase tracking-wider text-steel-900">Data Fiduciary Details:</p>
               <p className="mt-1">NSE – New Sahyadri Elevator</p>
               <p>Registered Office: Plot No. 14, Sector 19, Airoli, Navi Mumbai, Maharashtra 400708</p>
-              <p>Pune Operations Hub: Survey No. 42/3, Katraj-Kondhwa Road, Dattanagar, Pune, Maharashtra 411046</p>
+              <p>Pune Operations Hub: Survey No. 42/3, Katraj-Kondhwa Road, Pune, Maharashtra 411046</p>
               <p>Contact Email: office.pune@nsei.in | Dispatch Hotline: +91 91585 09904</p>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default function PrivacyPolicyPage() {
               <p>Organization: NSE – New Sahyadri Elevator</p>
               <p>Email: <a href="mailto:office.pune@nsei.in" className="text-emergency-400 underline">office.pune@nsei.in</a></p>
               <p>Dispatch Hotline: +91 91585 09904</p>
-              <p>Operations Address: Survey No. 42/3, Katraj-Kondhwa Road, Dattanagar, Pune, Maharashtra 411046</p>
+              <p>Operations Address: Survey No. 42/3, Katraj-Kondhwa Road, Pune, Maharashtra 411046</p>
               <p>Operating Hours: Monday – Saturday, 09:00 AM to 06:00 PM IST</p>
             </div>
             <p className="text-steel-600 text-xs mt-3">

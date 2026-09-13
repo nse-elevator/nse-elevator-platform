@@ -139,18 +139,7 @@ export default async function LocationPage({ params }: { params: { locationSlug:
                 <div className="text-xs space-y-3 font-mono">
                   <div>
                     <span className="text-slate-500 block text-[10px] uppercase font-bold">Office Address:</span>
-                    {loc.slug === 'elevator-repair-pune-dattanagar' ? (
-                      <div className="mt-1.5 p-3 bg-orange-50/80 border border-brand-orange/30 rounded-lg">
-                        <span className="text-[10px] font-mono text-brand-orange font-bold uppercase tracking-wider block mb-0.5">
-                          📍 Pune Operations Hub
-                        </span>
-                        <p className="text-xs font-semibold text-slate-900 font-sans">
-                          Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
-                        </p>
-                      </div>
-                    ) : (
-                      <span className="text-slate-800 font-sans">{loc.branchAddress}</span>
-                    )}
+                    <span className="text-slate-800 font-sans">{loc.branchAddress}</span>
                   </div>
                   <div>
                     <span className="text-slate-500 block text-[10px] uppercase font-bold">Direct Dispatch Phone:</span>

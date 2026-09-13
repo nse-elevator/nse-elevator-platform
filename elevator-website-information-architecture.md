@@ -24,7 +24,7 @@ The website structure is designed around search intent clustering: **Local Searc
 │   └── New Elevator Design & Installation (/services/elevator-installation)
 ├── Service Areas (/locations)
 │   ├── Navi Mumbai Hub (HQ) (/locations/elevator-repair-navi-mumbai)
-│   └── Pune Dattanagar Hub (Branch) (/locations/elevator-repair-pune-dattanagar)
+│   └── Pune Operations Hub (Branch) (/locations/elevator-repair-pune)
 ├── Industries Served (/industries)
 │   ├── Co-operative Housing Societies & CHS (/industries/residential-high-rises-condos)
 │   ├── Commercial Office Towers & IT Parks (/industries/commercial-office-buildings)
@@ -138,7 +138,7 @@ The website structure is designed around search intent clustering: **Local Searc
 
 ### 3.6. Local Service Hub Pages (`/locations/elevator-repair-[citySlug]`)
 * **Hub 1: Navi Mumbai** (`/locations/elevator-repair-navi-mumbai`): Airoli Headquarters, Vashi, Kopar Khairane, Mahape MIDC, Belapur, Panvel.
-* **Hub 2: Pune Dattanagar** (`/locations/elevator-repair-pune-dattanagar`): Dattanagar Branch, Katraj, Ambegaon, Dhankawadi, Sinhagad Road, Kothrud.
+* **Hub 2: Pune Operations Hub** (`/locations/elevator-repair-pune`): Hinjewadi, Baner, Wakad, Hadapsar, PCMC & Western Corridors.
 
 ---
 

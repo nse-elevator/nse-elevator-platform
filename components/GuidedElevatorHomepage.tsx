@@ -21,12 +21,6 @@ const QuoteCalculatorForm = dynamic(
 );
 
 const PUNE_DEPOT_LOCALITIES = [
-  'Dattanagar',
-  'Katraj',
-  'Ambegaon',
-  'Dhankawadi',
-  'Sinhagad Road',
-  'Kothrud',
   'Hinjewadi',
   'Baner',
   'Wakad',
@@ -126,36 +120,6 @@ export function GuidedElevatorHomepage() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: 'Sunil Deshmukh',
-      role: 'Society Secretary',
-      org: 'Sai Saburi CHS, Airoli',
-      text: 'NSE rescued our 12-floor building after our previous OEM direct service gave terrible callback delays. Their technician arrived within 20 minutes and permanently fixed our recurring door drive issue.',
-      date: '1 month ago',
-    },
-    {
-      name: 'Rajesh Patil',
-      role: 'Facility Director',
-      org: 'Swant Plaza Commercial Hub, Pune',
-      text: 'Transparent billing and genuine OEM spare parts. We migrated 4 high-speed commercial passenger elevators to NSE Comprehensive AMC and reduced society operational costs by 35% while improving uptime.',
-      date: '3 months ago',
-    },
-    {
-      name: 'Dr. Meera Kulkarni',
-      role: 'Chief Medical Administrator',
-      org: 'Apex Multi-Specialty Hospital, Vashi',
-      text: 'In a hospital, stretcher lift reliability is a matter of life and safety. NSE engineers maintain our bed elevators flawlessly with monthly 25-point routines and immediate emergency priority.',
-      date: '6 months ago',
-    },
-    {
-      name: 'Anand Shinde',
-      role: 'Managing Committee Chairman',
-      org: 'Mayflower Residency, Kothrud, Pune',
-      text: 'Our 14-year-old geared elevators suffered recurring breakdown issues under our previous contractor. NSE performed precision brake relining, counterweight rebalancing, and restored reliable, smooth operation in 48 hours.',
-      date: '8 months ago',
-    },
-  ];
 
   return (
     <div className="relative min-h-screen bg-slate-50 text-slate-800 selection:bg-brand-orange selection:text-white font-sans antialiased">
@@ -519,63 +483,6 @@ export function GuidedElevatorHomepage() {
               </div>
             </div>
           </section>
-
-          {/* =========================================================================
-              TRANSITION BAR 2: WHAT CLIENTS SAY (Reviews Carousel Matching Reference)
-             ========================================================================= */}
-          <section id="reviews" className="transition-floor-bar relative">
-            <div className="absolute inset-0 z-0 bg-slate-100/95 border-y border-slate-200" aria-hidden="true" />
-            <div className="transition-floor-bar__inner relative z-10 lg:pr-12">
-              <div className="mx-auto w-full text-center max-w-6xl">
-                <div className="reviews-carousel">
-                  <div className="mb-2 flex flex-col items-center gap-0.5">
-                    <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 fill-brand-orange text-brand-orange">
-                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                      ))}
-                    </div>
-                    <h2 className="text-lg font-bold text-slate-900 md:text-xl">What Our Clients Say</h2>
-                    <p className="text-xs text-slate-500">4.9 stars · 120+ verified client reviews</p>
-                  </div>
-
-                  <div className="relative">
-                    <div className="reviews-carousel__viewport">
-                      <div className="reviews-carousel__track">
-                        {testimonials.map((t, idx) => (
-                          <div key={idx} className="reviews-carousel__slide">
-                            <div className="reviews-carousel__card">
-                              <div style={{ marginBottom: '8px' }}>
-                                <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
-                                  {[...Array(5)].map((_, i) => (
-                                    <svg key={i} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-2.5 w-2.5 fill-brand-orange text-brand-orange">
-                                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                                    </svg>
-                                  ))}
-                                </div>
-                              </div>
-                              <p className="reviews-carousel__text">“{t.text}”</p>
-                              <div className="reviews-carousel__meta">
-                                <p className="reviews-carousel__name">{t.name} ({t.org})</p>
-                                <span className="reviews-carousel__date">{t.date}</span>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="mt-1.5 text-center">
-                    <Link href="/testimonials" className="text-[11px] font-medium text-brand-orange/90 underline-offset-2 transition-colors hover:text-brand-orange hover:underline">
-                      Read all reviews →
-                    </Link>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
 
         {/* =========================================================================
@@ -830,7 +737,7 @@ export function GuidedElevatorHomepage() {
                 <div data-stagger-grid className="mt-10 grid gap-4 md:grid-cols-2">
                   {/* Pune Depot */}
                   <Link
-                    href="/locations/elevator-repair-pune-dattanagar"
+                    href="/locations/elevator-repair-pune"
                     className="group border border-slate-200/90 bg-white transition-all duration-300 hover:border-brand-orange/50 hover:shadow-md hover:shadow-lg hover:shadow-brand-orange/10 rounded-xl p-5 block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
                   >
                     <div className="flex items-center justify-between mb-3">
@@ -847,7 +754,7 @@ export function GuidedElevatorHomepage() {
                     </div>
                     <h3 className="font-bold text-slate-900 text-lg">Pune Operations Depot</h3>
                     <p className="font-mono text-xs text-slate-500 mt-1">
-                      Dattanagar, Pune • PCMC &amp; Western Corridors
+                      Pune • PCMC &amp; Western Corridors
                     </p>
                     <p className="text-slate-600 transition-colors group-hover:text-slate-900 mt-2 text-sm leading-relaxed text-justify">
                       Primary regional depot deploying certified engineers for 24/7 rapid emergency response, comprehensive preventative AMC, and multi-brand repairs across Pune &amp; PCMC.
@@ -893,54 +800,12 @@ export function GuidedElevatorHomepage() {
                     {PUNE_DEPOT_LOCALITIES.map((locality) => (
                       <Link
                         key={locality}
-                        href="/locations/elevator-repair-pune-dattanagar"
+                        href="/locations/elevator-repair-pune"
                         className="rounded-full border border-slate-300 bg-slate-100/90 px-3.5 sm:px-4 py-1.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-brand-orange hover:bg-orange-50/80 hover:text-brand-orange hover:shadow-md cursor-pointer no-underline"
                       >
                         {locality}
                       </Link>
                     ))}
-                  </div>
-                </div>
-
-                {/* Compact Highlighted Pune Operations Hub Box */}
-                <div data-card-unit className="mt-5 rounded-xl border border-brand-orange/30 bg-orange-50/70 p-4 sm:p-5 shadow-xs transition-all">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-orange/15 text-brand-orange mt-0.5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                          <circle cx="12" cy="10" r="3" />
-                        </svg>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-brand-orange bg-brand-orange/10 px-2 py-0.5 rounded">
-                            Pune Operations Hub &amp; Branch Office
-                          </span>
-                        </div>
-                        <p className="mt-1 text-xs sm:text-sm font-semibold text-slate-900">
-                          Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
-                        </p>
-                        <p className="text-[11px] text-slate-500 font-mono mt-0.5">
-                          Local Hotline &amp; WhatsApp: <a href="tel:+919049994679" className="text-brand-orange font-bold hover:underline">+91 90499 94679</a> • Coverage: Pune, PCMC, Katraj, Hinjewadi &amp; Surrounding Localities
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 shrink-0 sm:self-center">
-                      <a
-                        href="tel:+919049994679"
-                        className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-brand-orange px-4 py-2 text-xs font-mono font-bold text-white shadow-xs transition-all hover:bg-brand-orange-dark active:scale-95 whitespace-nowrap"
-                      >
-                        Call Pune Hub
-                      </a>
-                      <Link
-                        href="/locations/elevator-repair-pune-dattanagar"
-                        className="inline-flex items-center justify-center gap-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-mono font-bold text-slate-700 hover:border-brand-orange hover:text-brand-orange shadow-xs transition-all whitespace-nowrap"
-                      >
-                        <span>Hub Details</span>
-                        <span>→</span>
-                      </Link>
-                    </div>
                   </div>
                 </div>
 
@@ -1329,7 +1194,7 @@ export function GuidedElevatorHomepage() {
                       </div>
                       <div className="pt-2 border-t border-slate-200">
                         <h4 className="font-bold text-slate-900 text-sm">Pune Operations Depot</h4>
-                        <p className="text-slate-600 text-xs mt-0.5">Dattanagar, Pune, Maharashtra</p>
+                        <p className="text-slate-600 text-xs mt-0.5">Pune, Maharashtra</p>
                       </div>
                       <div className="pt-2 border-t border-slate-200">
                         <span className="text-xs font-mono text-zinc-400">Email: office.pune@nsei.in</span>

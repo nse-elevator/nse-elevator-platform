@@ -39,12 +39,12 @@ const locations = [
     operationsCoverage: '24/7 Rapid Dispatch • Priority Coverage',
   },
   {
-    city: 'Pune (Dattanagar), MH',
-    slug: 'elevator-repair-pune-dattanagar',
+    city: 'Pune, MH',
+    slug: 'elevator-repair-pune',
     hub: 'Pune Regional Operations Hub',
-    address: 'Dattanagar, Pune, Maharashtra',
+    address: 'Pune, Maharashtra',
     phone: '+91 90499 94679',
-    areas: 'Dattanagar, Katraj, Ambegaon, Dhankawadi, Sinhagad Road, Kothrud, Pune City, Baner, Pashan, Wakad, Hinjewadi, Ravet, Punavale, Tathawade, Mamurdi, Marunji, Nere, Chinchwad',
+    areas: 'Hinjewadi, Baner, Pashan, Wakad, Hadapsar, Ravet, Punavale, Tathawade, Mamurdi, Marunji, Nere, Chinchwad, PCMC & Western Corridors',
     operationsCoverage: '15+ Certified Engineers • 24/7 Emergency Units',
   },
 ];
@@ -94,18 +94,7 @@ export default function LocationsHubPage() {
                 <h3 className="text-xl font-bold text-slate-900">
                   {loc.city}
                 </h3>
-                {loc.slug === 'elevator-repair-pune-dattanagar' ? (
-                  <div className="mt-3 p-3 bg-orange-50/80 border border-brand-orange/30 rounded-lg">
-                    <span className="text-[10px] font-mono text-brand-orange font-bold uppercase tracking-wider block mb-0.5">
-                      📍 Pune Operations Hub
-                    </span>
-                    <p className="text-xs font-semibold text-slate-900">
-                      Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
-                    </p>
-                  </div>
-                ) : (
-                  <p className="text-xs font-mono text-slate-500 mt-1">{loc.address}</p>
-                )}
+                <p className="text-xs font-mono text-slate-500 mt-1">{loc.address}</p>
 
                 <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-600 space-y-1.5">
                   <p className="text-justify"><strong className="text-slate-900">Key Corridors:</strong> {loc.areas}</p>

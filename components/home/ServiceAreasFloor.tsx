@@ -2,12 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 const PUNE_DEPOT_LOCALITIES = [
-  'Dattanagar',
-  'Katraj',
-  'Ambegaon',
-  'Dhankawadi',
-  'Sinhagad Road',
-  'Kothrud',
   'Hinjewadi',
   'Baner',
   'Wakad',
@@ -44,7 +38,7 @@ export function ServiceAreasFloor() {
             <div data-stagger-grid className="mt-10 grid gap-4 md:grid-cols-2">
               {/* Pune Depot */}
               <Link
-                href="/locations/elevator-repair-pune-dattanagar"
+                href="/locations/elevator-repair-pune"
                 className="group border border-slate-200/90 bg-white transition-all duration-300 hover:border-brand-orange/50 hover:shadow-md hover:shadow-lg hover:shadow-brand-orange/10 rounded-xl p-5 block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
               >
                 <div className="flex items-center justify-between mb-3">
@@ -61,7 +55,7 @@ export function ServiceAreasFloor() {
                 </div>
                 <h3 className="font-bold text-slate-900 text-lg">Pune Operations Depot</h3>
                 <p className="font-mono text-xs text-slate-500 mt-1">
-                  Dattanagar, Pune • PCMC &amp; Western Corridors
+                  Pune • PCMC &amp; Western Corridors
                 </p>
                 <p className="text-slate-600 transition-colors group-hover:text-slate-900 mt-2 text-sm leading-relaxed text-justify">
                   Primary regional depot deploying certified engineers for 24/7 rapid emergency response, comprehensive preventative AMC, and multi-brand repairs across Pune &amp; PCMC.
@@ -107,54 +101,12 @@ export function ServiceAreasFloor() {
                 {PUNE_DEPOT_LOCALITIES.map((locality) => (
                   <Link
                     key={locality}
-                    href="/locations/elevator-repair-pune-dattanagar"
+                    href="/locations/elevator-repair-pune"
                     className="rounded-full border border-slate-300 bg-slate-100/90 px-3.5 sm:px-4 py-1.5 text-xs sm:text-sm font-semibold text-slate-800 shadow-sm transition-all hover:border-brand-orange hover:bg-orange-50/80 hover:text-brand-orange hover:shadow-md cursor-pointer no-underline"
                   >
                     {locality}
                   </Link>
                 ))}
-              </div>
-            </div>
-
-            {/* Compact Highlighted Pune Operations Hub Box */}
-            <div data-card-unit className="mt-5 rounded-xl border border-brand-orange/30 bg-orange-50/70 p-4 sm:p-5 shadow-xs transition-all">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-orange/15 text-brand-orange mt-0.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-brand-orange bg-brand-orange/10 px-2 py-0.5 rounded">
-                        Pune Operations Hub &amp; Branch Office
-                      </span>
-                    </div>
-                    <p className="mt-1 text-xs sm:text-sm font-semibold text-slate-900">
-                      Swant Plaza, Shop No. 203, Dattanagar, Pune, Maharashtra – 411046
-                    </p>
-                    <p className="text-[11px] text-slate-500 font-mono mt-0.5">
-                      Local Hotline &amp; WhatsApp: <a href="tel:+919049994679" className="text-brand-orange font-bold hover:underline">+91 90499 94679</a> • Coverage: Pune, PCMC, Katraj, Hinjewadi &amp; Surrounding Localities
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 shrink-0 sm:self-center">
-                  <a
-                    href="tel:+919049994679"
-                    className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-brand-orange px-4 py-2 text-xs font-mono font-bold text-white shadow-xs transition-all hover:bg-brand-orange-dark active:scale-95 whitespace-nowrap"
-                  >
-                    Call Pune Hub
-                  </a>
-                  <Link
-                    href="/locations/elevator-repair-pune-dattanagar"
-                    className="inline-flex items-center justify-center gap-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-mono font-bold text-slate-700 hover:border-brand-orange hover:text-brand-orange shadow-xs transition-all whitespace-nowrap"
-                  >
-                    <span>Hub Details</span>
-                    <span>→</span>
-                  </Link>
-                </div>
               </div>
             </div>
 

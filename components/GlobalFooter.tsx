@@ -27,7 +27,7 @@ const industryLinks = [
 
 const locationLinks = [
   { name: 'Navi Mumbai Hub (HQ)', href: '/locations/elevator-repair-navi-mumbai' },
-  { name: 'Pune Hub (Dattanagar)', href: '/locations/elevator-repair-pune-dattanagar' },
+  { name: 'Pune Hub', href: '/locations/elevator-repair-pune' },
   { name: 'All Service Corridors', href: '/locations' },
 ];
 
@@ -169,13 +169,6 @@ export function GlobalFooter() {
               <div>
                 <span className="text-white block font-bold text-xs uppercase tracking-wider font-mono">Head Office:</span>
                 <p className="mt-0.5 text-slate-400 leading-relaxed">Airoli, Navi Mumbai, Maharashtra</p>
-              </div>
-              <div className="pt-1">
-                <span className="text-white block font-bold text-xs uppercase tracking-wider font-mono">Pune Branch:</span>
-                <div className="mt-1.5 p-2 bg-orange-950/40 border border-brand-orange/30 rounded-lg">
-                  <span className="text-[10px] font-mono text-brand-orange font-bold block mb-0.5">📍 Pune Operations Hub</span>
-                  <p className="text-slate-200 text-[11px] font-medium leading-snug">Swant Plaza, Shop No. 203, Dattanagar, Pune – 411046</p>
-                </div>
               </div>
               <div className="pt-1">
                 <span className="text-emerald-400 font-bold block text-xs uppercase tracking-wider font-mono">Service Commitment:</span>
